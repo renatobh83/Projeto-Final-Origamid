@@ -130,8 +130,9 @@ img {
 }
 /* INTRODUCAO */
 .introducao-bg {
-  background: var(--bg-background);
-  color: #ffffff;
+  background: var(--cor-12) url("../img/dec/bottom-left.svg") no-repeat bottom
+    160px left 20px;
+  color: var(--cor-0);
   box-shadow: inset 0 -120px #ffffff;
 }
 .introducao {
@@ -392,6 +393,8 @@ img {
   border-radius: 0;
 }
 .depoimento-conteudo {
+  background: url("../img/dec/bottom-right-p.svg") no-repeat bottom 40px right
+    40px;
   align-self: flex-end;
   padding: 40px 40px 80px 80px;
 }
@@ -416,6 +419,11 @@ img {
   font-size: 5rem;
   color: var(--cor-p2);
   position: absolute;
+}
+@media (min-width: 1200px) {
+  .depoimento img {
+    max-height: 520px;
+  }
 }
 @media (max-width: 800px) {
   .depoimento {
@@ -560,6 +568,9 @@ img {
   background: var(--cor-11);
   padding: 60px 0;
 }
+.titulo {
+  background: url("../img/dec/top-right.svg") no-repeat top right 20px;
+}
 .titulo p {
   margin-bottom: 4px;
 }
@@ -602,6 +613,7 @@ img {
   gap: 40px;
   padding-top: 60px;
   padding-bottom: 60px;
+  background: url("../img/dec/top-right.svg") no-repeat top 40px right 20px;
 }
 .bicicletas-imagem {
   display: grid;
@@ -934,11 +946,13 @@ img {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .contato-dados {
-  background: var(--cor-12);
+  background: var(--cor-12) url("../img/dec/bottom-left.svg") no-repeat bottom
+    20px left 20px;
   border-radius: 5px 0 0 5px;
 }
 .contato-formulario {
-  background: var(--cor-0);
+  background: var(--cor-0) url("../img/dec/bottom-right.svg") no-repeat bottom
+    20px right 20px;
   border-radius: 0 5px 5px 0;
 }
 .contato-dados h2 {
@@ -988,6 +1002,7 @@ img {
   }
   .contato-dados {
     border-radius: 5px 5px 0 0;
+    background: var(--cor-12);
   }
   .contato-formulario {
     border-radius: 0 0 5px 5px;
@@ -1011,7 +1026,7 @@ img {
 }
 .form label {
   display: block;
-  font: 600 1rem/1.5 "Poppins";
+  font: 400 1rem/1.5 "Poppins";
   margin-bottom: 4px;
 }
 
@@ -1206,7 +1221,8 @@ textarea:focus {
 }
 .orcamento-dados {
   border-radius: 0 5px 5px 0;
-  background: var(--cor-0);
+  background: var(--cor-0) url("../img/dec/bottom-right.svg") no-repeat bottom
+    20px right 20px;
 }
 
 .orcamento-conteudo {
