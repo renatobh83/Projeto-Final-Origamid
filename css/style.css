@@ -99,7 +99,8 @@ img {
   margin-top: 4px;
   transition: width 0.2s;
 }
-.header-menu a:hover::after {
+.header-menu a:hover::after,
+.header-menu a.ativo::after {
   width: 100%;
 }
 
@@ -749,21 +750,25 @@ img {
 .perguntas dl > div:nth-child(odd) {
   background: var(--cor-1);
 }
-.perguntas dt {
+.perguntas button {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  background: none;
+  text-align: left;
+  width: 100%;
+  border: none;
 }
-.perguntas dt::before {
+.perguntas button::before {
   content: "";
   display: inline-block;
   width: 12px;
   height: 8px;
   background: var(--cor-p1);
 }
-.perguntas dt::after {
+.perguntas button::after {
   content: "";
   display: inline-block;
   width: 14px;
@@ -771,8 +776,15 @@ img {
   background: url("../img/icones/seta-abrir.svg");
   transition: transform 0.3s;
 }
-.perguntas dt:hover::after {
+.perguntas button:hover::after,
+.perguntas button[aria-expanded="true"]::after {
   transform: rotate(180deg);
+}
+.perguntas dd {
+  display: none;
+}
+.perguntas dd.ativo {
+  display: block;
 }
 .perguntas dd {
   padding-left: 20px;
@@ -1454,4 +1466,24 @@ textarea:focus {
 
 .cor-4 {
   color: #cccccc;
+}
+.fadeInDown {
+  transform: translate3d(0, -20px, 0);
+}
+.fadeInUp {
+  transform: translate3d(0, 20px, 0);
+}
+.fadeInRight {
+  transform: translate3d(20px, 0, 0);
+}
+.fadeInLeft {
+  transform: translate3d(-20px, 0, 0);
+}
+[data-anime] {
+  opacity: 0;
+}
+.anime {
+  opacity: 1;
+  transform: none;
+  transition: transform 0.8s, opacity 0.8s;
 }
